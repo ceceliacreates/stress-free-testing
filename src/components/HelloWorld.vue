@@ -2,17 +2,32 @@
 import { ref } from 'vue'
 
 defineProps({
-  msg: String
+  msg: String,
 })
 
 const count = ref(0)
 
 const quickLinks = [
-  { text: 'Vue Test Utils API for Vue 3', href: 'https://next.vue-test-utils.vuejs.org/api/' },
-  { text: `Lachlan Miller's Vue Testing Handbook`, href: 'https://lmiller1990.github.io/vue-testing-handbook/' },
-  { text: 'Interacting with Elements using Cy Commands', href: 'https://docs.cypress.io/guides/core-concepts/interacting-with-elements#Actionability' },
-  { text: 'Cypress API', href: 'https://docs.cypress.io/api/table-of-contents' },
-  { text: 'Chai Matchers', href: 'https://docs.cypress.io/guides/references/assertions#Chai' },
+  {
+    text: 'Vue Test Utils API for Vue 3',
+    href: 'https://next.vue-test-utils.vuejs.org/api/',
+  },
+  {
+    text: `Lachlan Miller's Vue Testing Handbook`,
+    href: 'https://lmiller1990.github.io/vue-testing-handbook/',
+  },
+  {
+    text: 'Interacting with Elements using Cy Commands',
+    href: 'https://docs.cypress.io/guides/core-concepts/interacting-with-elements#Actionability',
+  },
+  {
+    text: 'Cypress API',
+    href: 'https://docs.cypress.io/api/table-of-contents',
+  },
+  {
+    text: 'Chai Matchers',
+    href: 'https://docs.cypress.io/guides/references/assertions#Chai',
+  },
 ]
 </script>
 
@@ -22,15 +37,16 @@ const quickLinks = [
 
     <p>
       A pre-conference workshop for
-      <a href target="_blank">Vue Toronto 2021</a>.
+      <a href="https://vueconf.us/" target="_blank">VueConf 2022</a>.
     </p>
 
     <p>
       A version of this repository written in Typescript is available:
       <a
-        href
+        href="https://github.com/JessicaSachs/stress-free-testing-ts"
         target="_blank"
-      >Stress Free Testing (Typescript!)</a>.
+        >Stress Free Testing (Typescript!)</a
+      >.
     </p>
 
     <p class="pb-4">
@@ -42,7 +58,8 @@ const quickLinks = [
           :href="link.href"
           target="_blank"
           class="px-2 sibling:border-l-1"
-        >{{ link.text }}</a>
+          >{{ link.text }}</a
+        >
       </span>
     </p>
 
@@ -52,7 +69,9 @@ const quickLinks = [
       data-testid="counter"
       type="button"
       @click="count++"
-    >count is: {{ count }}</button>
+    >
+      count is: {{ count }}
+    </button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test live reload.
@@ -60,5 +79,4 @@ const quickLinks = [
   </div>
 </template>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
